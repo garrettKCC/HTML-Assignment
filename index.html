@@ -1,10 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
         <title>HTML Assignment</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        
     </head>
     <body>
-        <h1>My HTML!</h1>
+        <header>
+            <h1>A Form</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Form Section</h2>
+                <form>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email"><br>
+                    
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" name="password"><br><br>
+                    
+                    <label for="language">Language</label>
+                    <select name="language" id="language">
+                        <option value="English">English</option>
+                        <option value="Spanish">Spanish</option>    
+                        <option value="French">French</option>
+                    </select>
+                    <br><br>
+                    <fieldset>
+                        <legend>Color Choice</legend>
+                        <label for="red">Red</label>
+                        <input type="radio" name="color" id="red" value="red">
+                        <label for="blue">Blue</label>
+                        <input type="radio" name="color" id="blue" value="blue">
+                        <label for="yellow">Yellow</label>
+                        <input type="radio" name="color" id="yellow" value="yellow">
+                    </fieldset>
+                    <br>    
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </form>
+            </section>
+            <section>
+                <h2>Other Section</h2>
+                <img src="images/placekitten.jpg" alt="cute kitten">
+                
+                <p>This is a <a href="https://placekitten.com/300/200" target="_blank">link</a> 
+                    to where I got the image above.</p>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &COPY;<span id="year"></span></p>
+        </footer>
+        
+        <!--source: https://www.w3schools.com/js/js_date_methods.asp -->
+        <script>
+            var date = new Date();
+            document.getElementById("year").innerHTML=date.getFullYear();
+        </script>
+
     </body>
 </html>
